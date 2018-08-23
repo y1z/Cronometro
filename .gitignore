@@ -41,3 +41,4 @@
 *.suo
 *.opendb
 *.db
+*.tlog
