@@ -7,7 +7,7 @@ Cronometro::Cronometro(){}
 Cronometro::Cronometro(std::string Indicador)
 {
 	if( Indicador == "mc"){
-		M_TipoTiempo = Macrosegundos; 
+		M_TipoTiempo = Microsegundos; 
 	}
 	else if (Indicador == "ms") {
 		M_TipoTiempo = Milisegundos;
@@ -67,8 +67,8 @@ void Cronometro::FinalizarMedirTiempo()
 		PrintResultado();
 		break;
 
-	case(Macrosegundos):
-		M_macroSegundos = std::chrono::duration_cast<std::chrono::microseconds>(M_ResultadoPorDefecto);
+	case(Microsegundos):
+		M_microSegundos = std::chrono::duration_cast<std::chrono::microseconds>(M_ResultadoPorDefecto);
 		PrintResultado();
 		break;
 
@@ -85,41 +85,41 @@ void Cronometro::PrintResultado() {
 	switch (M_TipoTiempo)
 	{
 	case(Defecto):
-		std::cout << "El Timepo fue " << M_ResultadoPorDefecto.count() << "s";
+		std::cout << "El Timepo fue " << M_ResultadoPorDefecto.count() << "s \n";
 		break;
 	case(Segundo):
 		if (M_Segundos.count() == 1) 
 		{
-			std::cout << "El Timepo fue " << M_Segundos.count() << " Segundo";
+			std::cout << "El Timepo fue " << M_Segundos.count() << " Segundo\n";
 		}
 		else
 		{
-			std::cout << "El Timepo fue " << M_Segundos.count() << " Segundos";
+			std::cout << "El Timepo fue " << M_Segundos.count() << " Segundos\n";
 		}
 		break;
 	case(Milisegundos):
-		std::cout <<"El Tiempo fue "<< M_miliSegundos.count()<<" ms";
+		std::cout <<"El Tiempo fue "<< M_miliSegundos.count()<<" ms\n";
 		break;
-	case(Macrosegundos):
+	case(Microsegundos):
 
-		if (M_macroSegundos.count() == 1)
+		if (M_microSegundos.count() == 1)
 		{
-			std::cout << "El Tiempo fue " << M_macroSegundos.count() << " MacroSegundo";
+			std::cout << "El Tiempo fue " << M_microSegundos.count() << " MicroSegundo\n";
 		}
 		else
 		{
-			std::cout << "El Tiempo fue " << M_macroSegundos.count() << " MacroSegundos";
+			std::cout << "El Tiempo fue " << M_microSegundos.count() << " MicroSegundos\n";
 		}
 		break;
 	default:
-		std::cout << "El Timepo fue " << M_ResultadoPorDefecto.count() << " s";
+		std::cout << "El Timepo fue " << M_ResultadoPorDefecto.count() << " s\n";
 		break;
 	}
 }
 
 void Cronometro::ElegirMedidaTiempo(std::string Indicador) {
 	if (Indicador == "mc") {
-		M_TipoTiempo = Macrosegundos;
+		M_TipoTiempo = Microsegundos;
 	}
 	else if (Indicador == "ms") {
 		M_TipoTiempo = Milisegundos;

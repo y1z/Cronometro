@@ -30,7 +30,7 @@ public:
 	std::chrono::duration<double>  M_ResultadoPorDefecto;
 
 	std::chrono::milliseconds M_miliSegundos;//<= la variable que indica los milisegundos 
-    std::chrono::microseconds M_macroSegundos;//<= la variable que indica los microsegundos.
+    std::chrono::microseconds M_microSegundos;//<= la variable que indica los microsegundos.
 	std::chrono::seconds M_Segundos;//<= la variable que indica los segundos.
 
 private:
@@ -39,7 +39,7 @@ private:
 	{
 		AUTO = -1,
 		Defecto = 0,// Es indica al objecto lo que hace por defecto . 
-		Macrosegundos = 1,// Indica al objecto que va a sacar el timepo en Macrosegundos  
+		Microsegundos = 1,// Indica al objecto que va a sacar el timepo en Macrosegundos  
 		Milisegundos = 2,// Indica al objecto que va a sacar el tiempo en Milisegundos 
 		Segundo = 3// Indica al objecto que va a sacar el tiempo en Segundos .
 	};
