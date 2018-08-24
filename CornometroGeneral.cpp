@@ -19,6 +19,9 @@ Cronometro::Cronometro(std::string Indicador)
 		M_TipoTiempo = AUTO;
 		ComenzarMedirTiempo();
 	}
+	else if (Indicador == "normal" || Indicador == "defecto" || Indicador == "strandar" || Indicador == "usual") {
+		M_TipoTiempo = Normal;
+	}
 	else {
 		std::cout << "error no reconosco la medicion de timepo que me indicaste\n El tiempo se presentara de la forma por defecto de presentacion. \n preciona enter";
 		std::cin.ignore();
@@ -53,7 +56,7 @@ void Cronometro::FinalizarMedirTiempo()
 
 	switch (M_TipoTiempo)
 	{
-	case(Defecto): 
+	case(Normal): 
 			PrintResultado();
 		break;
 
@@ -84,7 +87,7 @@ void Cronometro::PrintResultado() {
 	// lo que hace este switch case es determinar cual Unidad de timepo presentar al usuario y imprimirlo en la consola.
 	switch (M_TipoTiempo)
 	{
-	case(Defecto):
+	case(Normal):
 		std::cout << "El Timepo fue " << M_ResultadoPorDefecto.count() << "s \n";
 		break;
 	case(Segundo):

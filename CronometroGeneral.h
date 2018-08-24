@@ -1,9 +1,6 @@
 #pragma once
-#include <ctime>
 #include <iostream>
 #include <chrono>
-#include <thread>
-#include <string>
 
 typedef std::chrono::high_resolution_clock::time_point T_P;// hice esto para no tener que teclar "std::chrono::high_resolution_clock::time_point" mill veces .
 //------------------------------------------//
@@ -38,12 +35,12 @@ private:
 	enum Banderas// estos enums son para indicar las medicion de tiempo que va presentar el objeto.
 	{
 		AUTO = -1,
-		Defecto = 0,// Es indica al objecto lo que hace por defecto . 
+		Normal = 0,// Es indica al objecto lo que hace por defecto . 
 		Microsegundos = 1,// Indica al objecto que va a sacar el timepo en Macrosegundos  
 		Milisegundos = 2,// Indica al objecto que va a sacar el tiempo en Milisegundos 
 		Segundo = 3// Indica al objecto que va a sacar el tiempo en Segundos .
 	};
 
-	Banderas M_TipoTiempo = Defecto;
+	Banderas M_TipoTiempo = Normal;
 };
 
