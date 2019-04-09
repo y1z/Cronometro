@@ -18,7 +18,7 @@
     <ClCompile Include="main.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="CornometroGeneral.cpp">
+    <ClCompile Include="CronometroGeneral.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>

@@ -1,5 +1,5 @@
-#include <iostream>
-#include <vector>
+
+#include<vector>
 #include <algorithm>
 #include"CronometroGeneral.h"
 using std::vector;

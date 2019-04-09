@@ -5,12 +5,12 @@
 #include <thread>
 #include <string>
 
-typedef std::chrono::high_resolution_clock::time_point T_P;// hice esto para no tener que teclar "std::chrono::high_resolution_clock::time_point" mill veces .
 //------------------------------------------//
 using std::chrono::high_resolution_clock;
 
 class Cronometro
 {
+	typedef std::chrono::high_resolution_clock::time_point T_P;// hice esto para no tener que teclar "std::chrono::high_resolution_clock::time_point" mill veces .
 public:
 	Cronometro();// constructor por defecto 
 	
